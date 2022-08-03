@@ -1,0 +1,703 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root
+{
+    --white: #242526;
+    --background: #18191A;
+    --hover-shadow: #f2f2f2;
+    --border: #ccc;
+    --box-shadow: rgba(0, 0, 0, 0.2);
+    --reactions-links: #65676b;
+    --black1: #1c1e21;
+    --black2: #050505;
+    --green: #2f9a48;
+}
+
+
+html
+{
+    height: 100%;
+    font-size: 62.5%;
+    
+}
+
+body
+{
+    background: var(--background);
+    min-height: 100%;
+    font-size: 1.6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+
+/* post header */
+
+
+.post
+{
+    background: var(--white);
+    width: 100%;
+    max-width: 50rem;
+    padding-bottom: 5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.1rem 0.2rem var(--box-shadow);
+}
+
+
+.post_headrer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2rem 1.6rem 0 1.6rem;
+}
+
+
+/* header left */
+
+
+.header_left
+{
+    flex: 1;
+}
+
+.author_name:hover,
+.post_date:hover
+{
+    text-decoration: underline;
+}
+
+.author_verified,
+.post_privacy,
+.options_icon
+{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(../image/icons-list-1.png);
+    background-size: 7.1rem 43.2rem;
+    background-repeat: no-repeat;
+    background-position: -1.7rem -38.6rem;
+}
+
+.author_name
+{
+    margin-right: 0.2rem;
+}
+
+.post_author-pic
+{
+    float: left;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+    border-radius: 50%;
+    box-shadow: 0 0.1rem 0.2rem var(--box-shadow);
+    transition: filter 0.2s ease;
+}
+
+.post_author-pic:hover
+{
+    filter: brightness(0.95);
+}
+
+.post_author
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--black2);
+}
+
+.post_date
+{
+    display: block;
+    float: left;
+    font-size: 1.3rem;
+    color: var(--black1);
+}
+
+
+
+
+
+
+
+
+.post_date-privacy-separator
+{
+    position: relative;
+    bottom: 0.1rem;
+}
+
+.post_privacy
+{
+    background-image: url(../image/icons-list-2.png);
+    background-size: 2.6rem 89.4rem;
+    background-position: 0 -78.2rem;
+    opacity: 0.6;
+}
+
+
+
+/* header right */
+
+.post_options
+{
+    padding: 1rem;
+    border-radius: 50%;
+    line-height: 50%;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+}
+
+.post_options:hover
+{
+    background: #65676b;
+}
+
+.options_icon
+{
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    background-size: 7.4rem 43rem;
+    background-position: -2.2rem -24rem;
+    opacity: 0.6;
+}
+
+
+
+/* post content */
+
+.content_paragraph
+{
+    font-size: 1.5rem;
+    padding: 0.8rem 1.6rem 0.8rem 1.6rem;
+}
+
+.content_image
+{
+    width: 100%;
+    height: 33rem;
+    object-fit: cover;
+    display: block;
+}
+
+.content_image:hover
+{
+    cursor: pointer;
+}
+
+
+/** post footer **/
+/* reactions */
+.footer_reactions
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1.6rem;
+    color: var(--reactions-links);
+    font-size: 1.5rem;
+}
+
+.reactions_emojis
+{
+    display: flex;
+    align-items: center;
+}
+
+.emojis_like,
+.emojis_love,
+.emojis_haha
+{
+    height: 1.8rem;
+    width: 1.8rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.emojis_like
+{
+    z-index: 2;
+}
+
+.emojis_haha
+{
+    z-index: 1;
+    left: -0.2rem;
+}
+
+.emojis_love
+{
+    left: 0.3rem;
+}
+
+.emojis_count
+{
+    margin-left: 0.7rem;
+}
+
+.comment-shares_shares
+{
+    margin-left: 0.2rem;
+}
+
+.emojis_count:hover,
+.comment-shares_comments:hover,
+.comment-shares_shares:hover
+{
+    text-decoration: underline;
+}
+
+
+/* buttons */
+
+.footer_buttons
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 1.2rem;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.buttons_like,
+.buttons_comment,
+.buttons_share
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    width: 100px;
+    height: 3.5rem;
+    margin: 0.2rem 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    color: #adb2b6;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+
+.buttons_like:hover,
+.buttons_comment:hover,
+.buttons_share:hover
+{
+    background: #3a3b3c;
+}
+
+.like_icon,
+.comment_icon,
+.share_icon
+{
+    width: 1.8rem;
+    display: inline-block;
+    background-image: url(../image/icons-list-3.png);
+    background-size: 2.6rem 77.4rem;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+    margin-right: 0.5rem;
+}
+
+.like_icon
+{
+    background-position: 0 -18rem;
+}
+
+.comment_icon
+{
+    background-position: 0 -14rem;
+}
+
+.share_icon
+{
+    background-position: 0 -20rem;
+}
+
+
+/* post comments */
+
+.footer_comments
+{
+    padding: 0.8rem 1.2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: right;
+    color: #adb2b6;
+}
+
+/* comments filter */
+
+.comments_filter
+{
+    display: inline-block;
+    margin-bottom: 0.8rem;
+    cursor: pointer;
+}
+
+.filter_icon
+{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-image: url(../image/icons-list-4.png);
+    background-size: 7.4rem 43.4rem;
+    background-repeat: no-repeat;
+    background-position: -5.4rem -36.4rem;
+    opacity: 0.6;
+    vertical-align: middle;
+}
+
+
+/* write acomment  box */
+
+.comments_box
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.box_profile
+{
+    margin-right: 1rem;
+    /* margin-left: 1rem; */
+    position: relative;
+}
+
+.box_profile::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0.7rem;
+    height: 0.7rem;
+    bottom: 0.3rem;
+    left: 2.3rem;
+    background: var(--green);
+    border: 0.3rem solid var(--white);
+    border-radius: 50%;
+}
+
+.box_profile:hover
+{
+    cursor: pointer;
+}
+.profile_pic
+{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+}
+
+.box_bar
+{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.bar_input
+{
+    height: 4.16rem;
+    width: 100%;
+    background: var(--background);
+    border: none;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    color: #adb2b6;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    outline: none;
+    flex: 1;
+}
+
+.bar_input::placeholder
+{
+    opacity: 0.8;
+}
+
+.bar_input:focus::-webkit-input-placeholder
+{
+    opacity: 0.6 ;
+}
+
+.bar_emojis
+{
+    display: flex;
+    align-items: center;
+    height: 4.16rem;
+    background: var(--background);
+    padding-right: 1.2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.emojis_attach,
+.emojis_insert,
+.emojis_gif,
+.emojis_sticker
+{
+    border-radius: 50%;
+    padding: 0.5rem;
+    line-height: 0.5rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+}
+
+.emojis_attach:hover,
+.emojis_insert:hover,
+.emojis_gif:hover,
+.emojis_sticker:hover
+{
+    background: var(--hover-shadow-2);
+}
+
+.insert_emoji,
+.attach_emoji,
+.gif_emoji,
+.sticker_emoji
+{
+    width: 1.6rem;
+    height: 1.6rem;
+    display: inline-block;
+    background-image: url(../image/icons-list-3.png);
+    background-size: 2.6rem 77.4rem;
+    background-repeat: no-repeat;
+    opacity: 0.6;
+}
+
+.insert_emoji
+{
+    background-position: 0 -32.8rem;
+}
+
+.attach_emoji
+{
+    background-position: 0 -27.4rem;
+}
+
+
+.gif_emoji
+{
+    background-position: 0 -34.6rem;
+}
+
+
+.sticker_emoji
+{
+    background-position: 0 -40rem;
+}
+
+/* friend comment */
+
+.comments_frind-comment
+{
+    display: flex;
+    text-align: start;
+}
+
+.frind-comment_pic
+{
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.frind-comment_pic:hover
+{
+    filter: brightness(0.95);
+}
+
+.frind-comment_comment
+{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    background: var(--background);
+    border-radius: 1.5rem;
+}
+
+.comment_author
+{
+    align-self: flex-start;
+    color: var(--black2);
+    font-size: 1.35rem;
+}
+
+.comment_author:hover
+{
+    text-decoration: underline;
+}
+
+.comment_content
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--black2);
+}
+
+.comment_reactions
+{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: -1.5rem;
+    right: 0;
+    padding: 0.2rem 0.5rem;
+    background: var(--white);
+    box-shadow: 0 0.1rem 0.2rem var(--box-shadow);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.reactions_emojis
+{
+    width: 1.6rem;
+    height: 1.6rem;
+    position: relative;
+}
+
+.reactions_like
+{
+    z-index: 2;
+}
+
+.reactions_haha
+{
+    z-index: 1;
+    left: -0.3rem;
+}
+
+.reactions_love
+{
+    left: -0.6rem;
+}
+
+.reactions_count
+{
+    position: relative;
+    right: 0.1rem;
+    font-size: 1.32rem;
+    font-weight: 400;
+    color: var(--reactions-links);
+}
+
+.frind-comment_options
+{
+    align-self: center;
+    padding: 0.8rem;
+    border-radius: 50%;
+    line-height: 0.8rem;
+    cursor: pointer;
+}
+
+.frind-comment_options:hover
+{
+    background: var(--hover-shadow);
+}
+
+.options_comment
+{
+    width: 1.6rem;
+    height: 1.6rem;
+    background-position: 0 -36.8rem;
+    background-size: 7.4rem 44.6rem;
+    background-image: url(../image/icons-list-5.png);
+}
+
+.comment_links,
+.comment_replies
+{
+    position: absolute;
+}
+
+
+
+/* like and comment date */
+
+.comment_links
+{
+    bottom: -2rem;
+    color: var(--reactions-links);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.comment_replies
+{
+    display: flex;
+    align-items: center;
+    bottom: -4.5rem;
+}
+
+.comment_replies:hover
+{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.replies_emoji
+{
+    width: 1.6rem;
+    height: 1.6rem;
+    background-image: url(../image/icons-list-6.png);
+    background-position: -5.4rem -24.4rem;
+    background-size: 7.4rem 32.2rem;
+    background-repeat: no-repeat;
+    display: inline-block;
+    opacity: 0.6;
+    margin-right: 0.5rem;
+}
+
+.comments_more-comments
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -5rem;
+}
+
+.more-comments_link:hover
+{
+    text-decoration: underline;
+}
+
+.more-comments_count
+{
+    font-weight: 400;
+}
+
+input
+{
+    caret-color: #adb2b6;
+}

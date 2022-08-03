@@ -1,0 +1,26 @@
+.bar
+{
+    background: linear-gradient(to right, #43c6ac, #191654);
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}
+.flex-auto
+{
+    flex: auto;
+    margin-left: 10px;
+}
+/*.logo span,
+.logo em
+{
+    color: crimson;
+    font-size: 25px;
+    font-weight: 600;
+}
+.logo .logo
+{
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+} */

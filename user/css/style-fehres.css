@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*
+{
+    box-sizing: border-box;
+}
+
+body {
+    color: #222;
+    font-family: changa,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.625em;
+    position: relative;
+    direction: rtl;
+    text-align: right;
+}
+
+
+
+table {
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+th {
+    text-align: inherit;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+}
+
+
+
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 0;
+}
+
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+
+
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
